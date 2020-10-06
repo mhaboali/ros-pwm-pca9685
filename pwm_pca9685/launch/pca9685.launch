@@ -1,0 +1,12 @@
+<launch>
+        <!-- low-level drive interface node  -->
+        <param name="frequency" value="50" />
+        <param name="address" value="0x40" />
+        <param name="device" value="/dev/i2c-0" />
+        <param name="timeout_value " value="[0,0,0,383,0,0,0,0,0,0,0,0,0,0,0,0]" />
+        <param name="pwm_min" value="[0,0,0,364,0,0,0,0,0,0,0,0,0,0,0,0]" />
+        <param name="pwm_max" value="[0,0,0,410,0,0,0,0,0,0,0,0,0,0,0,0]" />
+        <node name ="pwm_pca9685" pkg="pwm_pca9685" type="pca9685_node" output="screen" >
+        </node>
+
+</launch>
